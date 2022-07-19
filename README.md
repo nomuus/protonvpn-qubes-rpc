@@ -30,22 +30,22 @@ introduced in Qubes 4.1 be added in a future update.
 
 
 ## Prerequisites
----
+
 - Qubes 4.x
 - Linux AppVM/TemplateVM/NetVM
 - [ProtonVPN Linux CLI](https://github.com/ProtonVPN/linux-cli) installed on a NetVM
 - ProtonVPN account **logged on and configured** on the NetVM
-- Administrative experience to manually configure and setup NetVM and dom0.
+- Administrative experience to manually configure and setup NetVM and dom0
 
 
 ## Installation
----
+
 In summary, one must copy RPC service files to the ProtonVPN NetVM and copy 
 policy files in dom0. This is detailed in the [INSTALL](./INSTALL.md) documentation.
 
 
 ## Usage
----
+
 Use will depend on the policy configuration. The policy provided with the 
 project will provide access control for one NetVM to the many client VM's 
 using it. 
@@ -80,7 +80,7 @@ the policy for the tags accordingly.
 
 
 ## Examples
----
+
 #### Example 1
 From the AppVM tagged `protonmgr`, instruct the `protonvpn` tagged disposable NetVM named `disp1355` to connect using the cached session to the fastest available server:
 
@@ -91,7 +91,7 @@ From the AppVM tagged `protonmgr`, instruct the `protonvpn` tagged disposable Ne
 
 #### Example 2
 
-From the AppVM tagged `protonmgrSC`, instruct the `protonvpnSC` tagged NetVM named `sys-protonvpn-secure-core` to connect using the cached session to the fastest available server:
+From the AppVM tagged `protonmgrSC`, instruct the `protonvpnSC` tagged NetVM named `sys-protonvpn-secure-core` to connect using the cached session to the fastest available secure core server:
 
 ```
 /usr/bin/qrexec-client-vm sys-protonvpn-secure-core protonvpn.Connect+securecore
@@ -104,7 +104,7 @@ From the AppVM tagged `protonmgrSC`, instruct the `protonvpnSC` tagged NetVM nam
 
 
 ## License
----
+
 Copyright (C) 2022 nomuus
 
 This program is free software: you can redistribute it and/or modify

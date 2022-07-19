@@ -123,7 +123,7 @@ For other details see the project [README](./README.md) and [INSTALL](./INSTALL.
 
 
 ## License
----
+
 Copyright (C) 2022 nomuus
 
 This program is free software: you can redistribute it and/or modify
