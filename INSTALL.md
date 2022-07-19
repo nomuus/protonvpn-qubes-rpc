@@ -7,13 +7,19 @@ dom0 configurations consist of RPC policy files and manual tagging of desired do
 Once configured, administration should primarily consist of adding and removing tags that control access 
 to the RPC services.
 
+## ProtonVPN Linux
+
+For install instructions of the Linux CLI, see the official guide: https://protonvpn.com/support/linux-vpn-tool/
+
+For source code of the official Linux CLI, see: https://github.com/ProtonVPN/linux-cli
+
 
 ## NetVM RPC services
----
+
 ProtonVPN RPC services are implemented as per [Qubes documentation](https://www.qubes-os.org/doc/qrexec). 
 The Qubes services call the [Official ProtonVPN Linux CLI](https://github.com/ProtonVPN/linux-cli) using 
 the official `protonvpn-cli` command line tool. Services are intended to be executed on the NetVM from 
-another domain usng the Qrexec Framework.
+another domain using the Qrexec Framework.
 
 Documentation for this project's RPC services are located [here](./SERVICES.md).
 
@@ -43,7 +49,7 @@ as per [Qubes RPC administration documentation](https://www.qubes-os.org/doc/qre
 
 
 ## Dom0 Policies
----
+
 The provided policy files are templates and should be modified to suit environmental requirements.
 This project provides default named policy files for each RPC service. Policy files are provided 
 as the original format for backwards compatibility, and support 
@@ -78,11 +84,11 @@ suit the needs of the environment. For extended documentation on RPC policies, i
    Not all VM's will need this capability, otherwise any VM can potentially 
    manipulate the ProtonVPN connection. This may or may not be desired.
 
-   Example:  `qvm-tag othervm add protonmgr`.
+   Example:  `qvm-tag othervm add protonmgr`
 
 
 ## License
----
+
 Copyright (C) 2022 nomuus
 
 This program is free software: you can redistribute it and/or modify
