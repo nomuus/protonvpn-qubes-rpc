@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 # Qubes ProtonVPN RPC Services
 # Copyright (C) 2022 nomuus
 #
@@ -16,19 +16,17 @@
 # along with this program.  If not, see <https://www.gnu.org/licenses/>.
 #
 # Original source code available at <https://github.com/nomuus/protonvpn-qubes-rpc>.
-argl=$(echo "$1" | tr '[:upper:]' '[:lower:]')
-case "$argl" in
-    "fastest")
+shopt -s nocasematch
+case $1 in
+    fastest)
         argument="--fastest";;
-    "random")
+    random)
         argument="--random";;
-    "sc")
-    "securecore")
-    "secure-core")
+    sc | securecore | secure-core)
         argument="--sc";;
-    "p2p")
+    p2p)
         argument="--p2p";;
-    "tor")
+    tor)
         argument="--tor";;
     "")
         argument="";;

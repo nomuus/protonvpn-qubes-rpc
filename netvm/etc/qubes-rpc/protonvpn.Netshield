@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 # Qubes ProtonVPN RPC Services
 # Copyright (C) 2022 nomuus
 #
@@ -16,17 +16,13 @@
 # along with this program.  If not, see <https://www.gnu.org/licenses/>.
 #
 # Original source code available at <https://github.com/nomuus/protonvpn-qubes-rpc>.
-argl=$(echo "$1" | tr '[:upper:]' '[:lower:]')
-case "$argl" in
-    "off")
-    "disable")
+shopt -s nocasematch
+case $1 in
+    off | disable)
         argument="--off";;
-    "malware")
+    malware)
         argument="--malware";;
-    "ads")
-    "trackers")
-    "ads-malware")
-    "malware-ads-trackers")
+    ads | trackers | ads-malware | malware-ads-trackers)
         argument="--ads-malware";;
     *)
         echo "This service requires an argument: off, malware, ads-malware" >&2
