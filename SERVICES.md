@@ -24,7 +24,7 @@ For other details see the project [README](./README.md) and [INSTALL](./INSTALL.
 
    Service command: `/usr/bin/protonvpn-cli c $argument`
    
-   Argument: *none*, `fastest`, `random`, `secure-core` / `sc`, `p2p`, `tor`
+   Argument: *none*, `fastest`, `random`, `secure-core` / `sc`, `p2p`, `tor`, `cc_COUNTRYCODE`
 
    See also: `/usr/bin/protonvpn-cli c --help`
 

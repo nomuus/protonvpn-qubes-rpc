@@ -28,6 +28,8 @@ case $1 in
         argument="--p2p";;
     tor)
         argument="--tor";;
+    cc_[a-z][a-z])
+        argument="--cc ${1:3:2}";;
     "")
         argument="";;
     *)
