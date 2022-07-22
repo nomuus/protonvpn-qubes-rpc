@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 # Qubes ProtonVPN RPC Services
 # Copyright (C) 2022 nomuus
 #
@@ -16,11 +16,11 @@
 # along with this program.  If not, see <https://www.gnu.org/licenses/>.
 #
 # Original source code available at <https://github.com/nomuus/protonvpn-qubes-rpc>.
-argl=$(echo "$1" | tr '[:upper:]' '[:lower:]')
-case "$argl" in
-    "enable")
+shopt -s nocasematch
+case $1 in
+    tcp)
         argument="tcp";;
-    "disable")
+    udp)
         argument="udp";;
     *)
         echo "This service requires an argument: tcp or udp" >&2
