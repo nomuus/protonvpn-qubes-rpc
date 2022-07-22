@@ -105,7 +105,7 @@ From the AppVM tagged `protonmgrSC`, instruct the `protonvpnSC` tagged NetVM nam
 
 #### Example 3
 
-From the AppVM tagged `protonmgr`, instruct the `protonvpn` tagged disposable NetVM named `disp7573` to connect using the cached session to the a server from country code `US` (United States):
+From the AppVM tagged `protonmgr`, instruct the `protonvpn` tagged disposable NetVM named `disp7573` to connect using the cached session to a server from country code `US` (United States):
 
 ```
 /usr/bin/qrexec-client-vm disp7573 protonvpn.Connect+cc_us
